@@ -1,0 +1,147 @@
+/* Basics */
+:root{
+    --primary-color : #343541;
+    --secondary-color : #444654;
+    --text-color : #fff;
+}
+#light{
+    --primary-color : #ffffff;
+    --secondary-color : #e2e2e2;
+    --text-color : #000;
+}
+
+
+*{
+    font-family: sans-serif;
+    color: var(--text-color);
+}
+
+
+
+body{
+    background-color: var(--primary-color);
+}
+
+/* Remove scrool bar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Outer Container */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Question answer box */
+.qus-ans{
+    padding-bottom: 200px;
+    overflow: auto;
+}
+
+.question, .answer{
+    min-height: 50px;
+    width: 50vw;
+    position: relative;
+    padding: 20px 5px 5px 70px;
+}
+
+.answer{
+    background-color: var(--secondary-color) ;
+}
+
+/* Logo image */
+.logo{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 20px;    
+}
+
+img{
+    height: 35px;
+    width: 35px;
+    border-radius: 2px;
+}
+
+.ask-form{
+    position: fixed;
+    bottom: 50px;
+    width: 50vw;
+    height: 40px;
+    z-index: 99;
+    background-color: var(--secondary-color);
+    border: none;
+    box-shadow: 0 0 10px 3px #0004;
+    border-radius: 5px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#ask-here{
+    background-color: var(--secondary-color);
+    border: none;
+    height: 90%;
+    width: 80%;
+    margin-right: 10%;
+    font-size: 1rem;
+}
+#ask-here:focus{
+    outline: none;
+}
+
+#submit{
+    font-size: 1rem;
+    background-color: #0000;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: var(--primary-color);
+}
+
+
+.bottom-blur{
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    background:linear-gradient(0deg, var(--primary-color), 90%, transparent);
+    z-index: 1;
+    bottom: 0;
+}
+
+#change-theme{
+    background: none;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 10vw;
+    bottom: 10vh;
+    z-index: 999;
+
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width : 600px){
+.question, .answer{
+    width: 80vw;
+}
+.ask-form{
+    width: 80vw;
+}
+}
